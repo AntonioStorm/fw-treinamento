@@ -1,0 +1,12 @@
+[submodule "src/3rdparty/pico-sdk"]
+	path = src/3rdparty/pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk.git
+[submodule "src/3rdparty/FreeRTOS-Kernel"]
+	path = src/3rdparty/FreeRTOS-Kernel
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
+[submodule "src/3rdparty/nrf2401p"]
+	path = src/3rdparty/nrf2401p
+	url = https://github.com/Alexandre-Jr/nrf24l01p_lib.git
+[submodule "src/3rdparty/linkarch"]
+	path = src/3rdparty/linkarch
+	url = https://github.com/Alexandre-Jr/linkarch.git
