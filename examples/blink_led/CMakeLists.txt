@@ -22,7 +22,7 @@ add_executable(blink_led
 # Linka com as bibliotecas padrão
 target_link_libraries(blink_led 
     pico_stdlib 
-    hardware_adc
+    # hardware_adc
     pico_stdio)
 
 
