@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 # Importa o SDK da Raspberry Pi Pico (ver abaixo como fazer isso funcionar)
-include(3rdparty/pico_sdk_import.cmake)
+include(3rdparty/pico-sdk/pico_sdk_import.cmake)
 
 # Nome do projeto e linguagem
 project(blink_led C CXX ASM)
