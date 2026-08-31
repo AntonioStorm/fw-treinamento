@@ -16,7 +16,7 @@ pico_sdk_init()
 
 # Adiciona o executável
 add_executable(blink_led
-    src/main.c
+    examples/blink_led/src/main.c
 )
 
 # Linka com as bibliotecas padrão

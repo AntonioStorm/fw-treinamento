@@ -1,3 +1,1 @@
-git pull
-
-git submodule update --init --recursive
+git submodule update --init --recursive 3rdparty/pico-sdk
