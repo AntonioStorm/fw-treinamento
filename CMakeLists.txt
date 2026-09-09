@@ -1,7 +1,7 @@
 # Mínimo necessário para usar o CMake
 cmake_minimum_required(VERSION 3.13)
 
-# Importa o SDK da Raspberry Pi Pico (ver abaixo como fazer isso funcionar)
+# Importa o SDK da Raspberry Pi Pico
 include(3rdparty/pico-sdk/external/pico_sdk_import.cmake)
 
 # Nome do projeto e linguagem
@@ -16,7 +16,7 @@ pico_sdk_init()
 
 # Adiciona o executável
 add_executable(blink_led
-    examples/blink_led/src/main.c
+    examples/blink_led/src/blink_led_pico.c
 )
 
 # Linka com as bibliotecas padrão
