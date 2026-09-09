@@ -13,7 +13,7 @@ void Blink(const uint LED){
 int main(){
     
     stdio_init_all();
-    const uint LED = 25;
+    const uint LED = 16;
     gpio_init(LED);
     gpio_set_dir(LED, GPIO_OUT);
 
