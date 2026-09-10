@@ -20,7 +20,7 @@ int main(){
 
     adc_gpio_init(ADC0); // Initialize and select an specific ADC channel (ADC0 in this case)
 
-    adc_gpio_init(ADC4); // Initialize and select the internal temperature sensor channel (ADC4)
+    adc_set_temp_sensor_enabled(true);; // Initialize and select the internal temperature sensor channel (ADC4)
 
     while(true){
 
