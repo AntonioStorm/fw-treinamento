@@ -1,0 +1,2 @@
+add_subdirectory(blink_led_pico)
+add_subdirectory(blink_led_RP2040zero)

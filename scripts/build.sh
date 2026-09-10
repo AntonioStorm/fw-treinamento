@@ -1,10 +1,9 @@
-# cd examples/blink_led
 
 mkdir build
 mkdir dist
 
 cd build
 
-cmake ..
+cmake -DPICOTOOL_FORCE_FETCH_FROM_GIT=1 ..
 
 make -j"$(nproc)"
