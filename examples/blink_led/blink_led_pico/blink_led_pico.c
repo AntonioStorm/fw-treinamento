@@ -18,8 +18,9 @@ int main(){
     gpio_set_dir(LED, GPIO_OUT);
 
     while(true){
+
         Blink(LED);
-        sleep_ms(100);
+        
     }
 
 }
