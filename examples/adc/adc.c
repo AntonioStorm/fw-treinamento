@@ -41,7 +41,7 @@ void read_and_transform_adc(uint pin){
     
     uint16_t result = adc_read();
     
-    float voltage = result * 3.3f / (1 << 12); // Convert the ADC value to voltage (assuming a 12-bit ADC and a reference voltage of 3.3V)
+    float voltage = result * 3.236f / (1 << 12); // Convert the ADC value to voltage (assuming a 12-bit ADC and a reference voltage of 3.3V)
 
     printf("Voltage: %.2f V\n", voltage);
 
@@ -53,7 +53,7 @@ void temp_sensor(){
     adc_select_input(ADC4); // Select the ADC channel based on the pin number (ADC0 corresponds to channel 0, ADC1 to channel 1, etc.)
 
     uint16_t result = adc_read(); // Read the ADC value from the temperature sensor
-    float voltage = result * 3.23f / (1 << 12); // Convert the ADC value to voltage
+    float voltage = result * 3.236f / (1 << 12); // Convert the ADC value to voltage (The value od 3.236 was measure in my RP2040zero board, it can be different in other boards, the value of 3.3 is the default value in the datasheet)
 
     // Convert voltage to temperature in Celsius using the formula from the datasheet
     float temperature = 27 - (voltage - 0.706) / 0.001721;
