@@ -1,11 +1,17 @@
-rm -rf build
-rm -rf dist
+#!/usr/bin/env bash
+set -euo pipefail
 
-mkdir build
-mkdir dist
+BUILD_DIR="build"
+DIST_DIR="dist"
 
-cd build
+# remove só se existir, e com segurança quanto à localização
+rm -rf -- "$BUILD_DIR" "$DIST_DIR"
+mkdir -p -- "$BUILD_DIR" "$DIST_DIR"
+
+cd "$BUILD_DIR"
 
 cmake -DPICOTOOL_FORCE_FETCH_FROM_GIT=1 ..
 
-make -j"$(nproc)"
+cmake --build . --parallel "$(nproc)"
+
+echo "Build limpo concluído com sucesso."
