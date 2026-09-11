@@ -1,12 +1,13 @@
 
 add_executable(fw-treinamento
-    pwm.c)
+    temp_sensor.c)
 
 
 # Linka com as bibliotecas padrão
 target_link_libraries(fw-treinamento 
     pico_stdlib 
-    hardware_pwm
+    hardware_adc
+    hardware_gpio
     pico_stdio)   
 
 pico_enable_stdio_usb(fw-treinamento 1)

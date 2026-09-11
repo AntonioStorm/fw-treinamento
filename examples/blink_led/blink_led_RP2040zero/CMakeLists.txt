@@ -6,8 +6,7 @@ add_executable(fw-treinamento
 # Linka com as bibliotecas padrão
 target_link_libraries(fw-treinamento 
     pico_stdlib 
-    hardware_adc
-    hardware_gpio
+    hardware_pwm
     pico_stdio)   
 
 pico_enable_stdio_usb(fw-treinamento 1)
