@@ -1,6 +1,7 @@
 #include "pico/stdlib.h"
 #include "hardware/pwm.h"
 #include <stdio.h>
+#include "hello_pwm.h"
 
 
 int main() {
@@ -24,7 +25,7 @@ int main() {
 
     while (true) {
         // The main loop can be used to adjust the duty cycle or perform other tasks
-        sleep_ms(1000);
+        sleep_ms(DELAY_MS);
     }
 
     return 0;

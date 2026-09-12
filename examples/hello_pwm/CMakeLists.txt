@@ -1,6 +1,6 @@
 
 add_executable(fw-treinamento
-    pwm.c)
+    hello_pwm.c)
 
 
 # Linka com as bibliotecas padrão
