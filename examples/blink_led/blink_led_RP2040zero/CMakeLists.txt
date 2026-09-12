@@ -5,9 +5,9 @@ add_executable(fw-treinamento
 
 # Linka com as bibliotecas padrão
 target_link_libraries(fw-treinamento 
-    pico_stdlib 
-    hardware_pwm
-    pico_stdio)   
+    pico_stdlib
+    pico_cyw43_arch_none) 
+    
 
 pico_enable_stdio_usb(fw-treinamento 1)
 pico_enable_stdio_uart(fw-treinamento 0)

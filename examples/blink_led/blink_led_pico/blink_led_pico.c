@@ -1,30 +1,25 @@
 #include "pico/stdlib.h"
 #include <stdio.h>
 
-#ifndef LED_DELAY_MS
-#define LED_DELAY_MS 100
-#endif
+#include "blink_led_pico.h"
 
-#define LED_PIN 16
-
-void Blink(const uint LED){
-    gpio_put(LED, 1);
-    sleep_ms(LED_DELAY_MS);
-    gpio_put(LED, 0);
-    sleep_ms(LED_DELAY_MS);
-}
 
 int main(){
-    
     stdio_init_all();
-    const uint LED = LED_PIN;
-    gpio_init(LED);
-    gpio_set_dir(LED, GPIO_OUT);
+
+
+    gpio_init(LED_PIN);
+    gpio_set_dir(LED_PIN, GPIO_OUT);
 
     while(true){
-
-        Blink(LED);
-        
+        blink(LED_PIN, true);
+        sleep_ms(LED_DELAY_MS);
+        blink(LED_PIN, false);
+        sleep_ms(LED_DELAY_MS);
     }
+}
+
+void blink(uint pin, bool state){
+    gpio_put(pin, state);
 
 }
