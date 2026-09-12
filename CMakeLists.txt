@@ -1,6 +1,9 @@
 # Mínimo necessário para usar o CMake
 cmake_minimum_required(VERSION 3.13)
 
+# Define a placa alvo
+set(PICO_BOARD)
+
 # 
 set(PICO_SDK_PATH "${CMAKE_CURRENT_LIST_DIR}/3rdparty/pico-sdk")
  
