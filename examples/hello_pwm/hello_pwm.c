@@ -4,6 +4,8 @@
 #include "hello_pwm.h"
 
 
+// TODO: made this code more fittable for a training class.
+
 int main() {
     stdio_init_all();
 
@@ -11,6 +13,8 @@ int main() {
     
     gpio_set_function(0, GPIO_FUNC_PWM);
     gpio_set_function(1, GPIO_FUNC_PWM);
+
+    // TODO: Explain why and how the pwm frequency is fixed.
 
     // Get the PWM slice number for the specified GPIO
     uint slice_num = pwm_gpio_to_slice_num(0);

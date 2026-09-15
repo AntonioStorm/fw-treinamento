@@ -1,13 +1,10 @@
 #include <stdio.h>
 
 #include "pico/stdlib.h"
-#include "pico/cyw43_arch.h"
-
 #include "blink_led_RP2040zero.h"
 
-/* Pico W devices use a GPIO on the WIFI chip for the LED,
- so when building for Pico W, CYW43_WL_GPIO_LED_PIN will be defined*/
-
+/* The board RP2040zero uses a RGB LED that is controlled by w2812, you can 
+have more information in https://github.com/raspberrypi/pico-examples/blob/master/pio/ws2812/ws2812.pio#L36-L52$0*/
 
 int main(){
 
@@ -26,11 +23,10 @@ int main(){
 }
 
 void LED_init() {
-    // Initialize the CYW43 architecture
-    cyw43_arch_init();
+    ;
 }
 
 void enable_LED(bool state){
-    cyw43_arch_gpio_put(CYW43_WL_GPIO_LED_PIN, state);
+    ;
 }
 
