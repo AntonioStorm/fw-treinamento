@@ -30,6 +30,10 @@ int main() {
     while (true) {
         // The main loop can be used to adjust the duty cycle or perform other tasks
         sleep_ms(DELAY_MS);
+        for (int i = 100; i < 1000; i++) {
+          pwm_set_chan_level
+        }
+
     }
 
     return 0;
