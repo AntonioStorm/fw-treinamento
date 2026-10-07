@@ -2,6 +2,7 @@
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
 #include "hardware/gpio.h"
+#include "temp_sensor.h"
 
 /* This code is specific for RP2040 zero board and its pinout, since the internal temperature sensor is connected to ADC4,
  which is not available in the external pins of the board.*/

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include "hardware/adc.h"
+#include "hello_adc.h"
 
 // This code is specific for RP2040 zero board and its pinout
 
