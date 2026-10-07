@@ -1,9 +1,9 @@
 #pragma once
 
 #ifndef LED_DELAY_MS
-#define LED_DELAY_MS 1000
+#define LED_DELAY_MS 500
 #endif
 
-void LED_init(void);
+#define ws2812_PIN 16
 
-void enable_LED(bool state);
+static inline void put_pixel(PIO pio, uint sm, uint8_t r, uint8_t g, uint8_t b);

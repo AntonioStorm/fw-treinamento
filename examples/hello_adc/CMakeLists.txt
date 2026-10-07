@@ -1,0 +1,2 @@
+# add_subdirectory(temp_sensor)
+add_subdirectory(hello_adc)

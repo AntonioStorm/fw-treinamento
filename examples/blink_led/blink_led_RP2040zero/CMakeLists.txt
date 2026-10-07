@@ -2,12 +2,13 @@
 add_executable(fw-treinamento
     blink_led_RP2040zero.c)
 
+pico_generate_pio_header(fw-treinamento ${CMAKE_CURRENT_LIST_DIR}/ws2812.pio)
 
 # Linka com as bibliotecas padrão
 target_link_libraries(fw-treinamento 
     pico_stdlib
-    pico_cyw43_arch_none) 
-    
+    hardware_pio
+    ) 
 
 pico_enable_stdio_usb(fw-treinamento 1)
 pico_enable_stdio_uart(fw-treinamento 0)
